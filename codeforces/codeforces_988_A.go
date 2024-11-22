@@ -1,11 +1,11 @@
-package main
+package codeforces
 
 import (
 	"fmt"
 	"main/templates"
 )
 
-func main() {
+func Codeforces_988_A() {
 	var t int
 	fmt.Scan(&t)
 
