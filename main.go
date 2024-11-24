@@ -3,5 +3,5 @@ package main
 import "main/codeforces"
 
 func main() {
-	codeforces.Codeforces_988_C()
+	codeforces.Codeforces_988_D()
 }
