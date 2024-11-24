@@ -39,7 +39,7 @@ func (h *MaxHeapInt) Pop() any {
 	old := *h
 	n := len(old)
 	x := old[n-1]
-	*h = old[0 : n-1]
+	*h = old[:n-1]
 	return x
 }
 
@@ -52,7 +52,8 @@ func (h MaxHeapInt) Swap(i, j int) {
 }
 
 // https://codeforces.com/contest/2037/problem/D
-func Main() {
+// This question didnt got accepted with go and instead same logic worked with c++
+func main() {
 	var t int
 	fmt.Scan(&t)
 
@@ -70,28 +71,27 @@ func Main() {
 		var maxheap MaxHeapInt
 		heap.Init(&maxheap)
 
-		for i := 1; i <= l; i++ {
+		for currentHurdle < n {
 			//power handle
-			for ; currentPower < m && powers[currentPower][0] <= i; currentPower++ {
+			for ; currentPower < m && powers[currentPower][0] < hurdles[currentHurdle][0]; currentPower++ {
 				heap.Push(&maxheap, powers[currentPower][1])
 			}
 
-			if currentHurdle < n && hurdles[currentHurdle][0] == i {
-				hurdleSize := hurdles[currentHurdle][1] - hurdles[currentHurdle][0] + 1
-				for power <= hurdleSize && maxheap.Len() > 0 {
-					maxiPower := heap.Pop(&maxheap).(int)
-					// fmt.Println("hurdlesize: ", hurdleSize)
-					// fmt.Println("maxiPower: ", maxiPower)
-					power += maxiPower
-					totalPowersTaken += 1
-				}
-
-				if power <= hurdleSize {
-					totalPowersTaken = -1
-					break
-				}
-				currentHurdle++
+			hurdleSize := hurdles[currentHurdle][1] - hurdles[currentHurdle][0] + 1
+			for power <= hurdleSize && maxheap.Len() > 0 {
+				maxiPower := heap.Pop(&maxheap).(int)
+				// fmt.Println("hurdlesize: ", hurdleSize)
+				// fmt.Println("maxiPower: ", maxiPower)
+				power += maxiPower
+				totalPowersTaken += 1
 			}
+
+			if power <= hurdleSize {
+				totalPowersTaken = -1
+				break
+			}
+			currentHurdle++
+
 		}
 
 		fmt.Println(totalPowersTaken)

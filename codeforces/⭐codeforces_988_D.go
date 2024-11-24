@@ -47,6 +47,7 @@ func Codeforces_988_D() {
 					totalPowersTaken = -1
 					break
 				}
+				i = hurdles[currentHurdle][1]
 				currentHurdle++
 			}
 		}
