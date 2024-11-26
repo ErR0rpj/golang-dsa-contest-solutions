@@ -1,4 +1,4 @@
-package main
+package codeforces
 
 import "fmt"
 
@@ -11,7 +11,7 @@ func ask(pointer1 int, pointer2 int, steps *int) (sum int) {
 }
 
 //https://codeforces.com/contest/2037/problem/E
-func main() {
+func Codeforces_988_E() {
 	var t int
 	fmt.Scan(&t)
 
