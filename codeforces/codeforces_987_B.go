@@ -1,15 +1,9 @@
-package main
+package codeforces
 
 import (
 	"fmt"
+	"main/templates"
 )
-
-// Takes the input for predefined length n array
-func InputArray(input []int, n int) {
-	for i := 0; i < n; i++ {
-		fmt.Scan(&input[i])
-	}
-}
 
 func isSwapable(arr []int, index int) bool {
 	currentNo := arr[index-1]
@@ -27,7 +21,7 @@ func isSwapable(arr []int, index int) bool {
 }
 
 // https://codeforces.com/contest/2031/problem/B
-func main() {
+func Codeforces_987_B() {
 	var t int
 	fmt.Scan(&t)
 
@@ -37,7 +31,7 @@ func main() {
 
 		ans := "YES"
 		arr := make([]int, n)
-		InputArray(arr, n)
+		templates.InputArray(arr, n)
 
 		for i := range arr {
 			index := i + 1

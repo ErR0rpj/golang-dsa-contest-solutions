@@ -5,9 +5,9 @@ import (
 	"main/templates"
 )
 
-func ableToKill(position []int, currentIndex int, dividerIndex int, divider []int) bool {
-	return false
-}
+// func ableToKill(position []int, currentIndex int, dividerIndex int, divider []int) bool {
+// 	return false
+// }
 
 // https://codeforces.com/contest/2037/problem/F
 func Codeforces_988_F() {
@@ -63,7 +63,8 @@ func Codeforces_988_F() {
 			}
 			possible := false
 			for i := range intervals {
-				if ableToKill() {
+				// This is wrong
+				if i == 1 {
 					possible = true
 					break
 				}
