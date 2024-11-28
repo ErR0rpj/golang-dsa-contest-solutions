@@ -1,11 +1,11 @@
-package main
+package codeforces
 
 import (
 	"fmt"
 )
 
 // https://codeforces.com/contest/2031/problem/C
-func main() {
+func Codeforces_987_C() {
 	var t int
 	fmt.Scan(&t)
 
