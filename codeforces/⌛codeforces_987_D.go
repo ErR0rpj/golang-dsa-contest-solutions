@@ -1,7 +1,8 @@
-package main
+package codeforces
 
 import (
 	"fmt"
+	"main/templates"
 )
 
 func findHighest(arr []int, highest []int, current int) int {
@@ -14,14 +15,7 @@ func findHighest(arr []int, highest []int, current int) int {
 	return arr[current]
 }
 
-// Takes the input for predefined length n array
-func InputArray(input []int, n int) {
-	for i := 0; i < n; i++ {
-		fmt.Scan(&input[i])
-	}
-}
-
-func main() {
+func Codeforces_987_D() {
 	var t int
 	fmt.Scan(&t)
 
@@ -29,7 +23,7 @@ func main() {
 		var n int
 		fmt.Scan(&n)
 		arr := make([]int, n)
-		InputArray(arr, n)
+		templates.InputArray(arr, n)
 
 		highest := make([]int, n)
 		for i := 1; i < n; i++ {

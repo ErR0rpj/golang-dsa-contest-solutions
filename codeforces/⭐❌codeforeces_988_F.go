@@ -5,7 +5,12 @@ import (
 	"main/templates"
 )
 
-// func ableToKill(position []int, currentIndex int, dividerIndex int, divider []int) bool {
+// func ableToKill(position []int, health []int, divider []int, m int, k int, startInterval int, endInterval int) bool {
+// 	// dividerPos := 0
+// 	// for i := startInterval ; i<len(divider); i++ {
+// 	// 	if startInterval <
+// 	// }
+
 // 	return false
 // }
 
@@ -53,8 +58,8 @@ func Codeforces_988_F() {
 					powerReq += 1
 				}
 				if powerReq <= m {
-					endInterval := position[i] + (m - powerReq)
-					startInterval := position[i] - (m - powerReq)
+					endInterval := position[i] + (m - powerReq) - m
+					startInterval := position[i] - (m - powerReq) - m
 					interval := make([]int, 2)
 					interval[0] = startInterval
 					interval[1] = endInterval
@@ -63,8 +68,7 @@ func Codeforces_988_F() {
 			}
 			possible := false
 			for i := range intervals {
-				// This is wrong
-				if i == 1 {
+				if i == 0 {
 					possible = true
 					break
 				}
