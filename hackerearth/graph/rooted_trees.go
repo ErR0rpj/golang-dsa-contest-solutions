@@ -1,29 +1,26 @@
-package main
+package graph
 
 import (
 	"fmt"
+	"main/templates"
 )
 
 func traverseAndAdd(adj [][]int, v int, x int, y int, val []int) {
-	if val[v] < y {
-		val[v] += x
-	}
 	for i := 0; i < len(adj[v]); i++ {
+		if val[adj[v][i]] < y {
+			val[adj[v][i]] += x
+		}
 		traverseAndAdd(adj, adj[v][i], x, y, val)
 	}
 }
 
-func TripleInput(a *int, b *int, c *int) {
-	fmt.Scan(a, b, c)
-}
-
-func main() {
+func RootedTrees() {
 	var t int
 	fmt.Scan(&t)
 
 	for ; t > 0; t-- {
 		var n, q, y int
-		TripleInput(&n, &q, &y)
+		templates.TripleInput(&n, &q, &y)
 
 		adj := make([][]int, n+1)
 		val := make([]int, n+1)
