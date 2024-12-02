@@ -1,4 +1,4 @@
-package hackerearth
+package graph
 
 import "fmt"
 
