@@ -1,4 +1,4 @@
-package main
+package codeforces
 
 import "fmt"
 
@@ -21,7 +21,7 @@ func predictorFinder(arr [][]int, index int) []int {
 	return predictors
 }
 
-func main() {
+func Codeforces_172_D() {
 	var t int
 	fmt.Scan(&t)
 
