@@ -1,4 +1,4 @@
-package main
+package codeforces
 
 import (
 	"bufio"
@@ -40,7 +40,7 @@ func maximizeLexicographically(s string) string {
 	return string(arr)
 }
 
-func main() {
+func Codeforces_991_D() {
 	scanner := bufio.NewScanner(os.Stdin)
 
 	// Read number of test cases
