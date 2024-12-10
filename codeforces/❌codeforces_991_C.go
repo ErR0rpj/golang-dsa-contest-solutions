@@ -1,8 +1,10 @@
-package main
+package codeforces
 
 import "fmt"
 
-func main() {
+//https://codeforces.com/contest/2050/problem/C
+// Always gives wrong ans for test case 3, 451st value.
+func Codeforces_991_C() {
 	var t int
 	fmt.Scan(&t)
 
