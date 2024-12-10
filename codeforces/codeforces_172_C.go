@@ -1,4 +1,4 @@
-package main
+package codeforces
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 // https://codeforces.com/contest/2042/problem/C
-func main() {
+func Codeforces_172_C() {
 	var t int
 	fmt.Scan(&t)
 
