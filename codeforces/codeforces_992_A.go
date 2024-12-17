@@ -1,17 +1,12 @@
-package main
+package codeforces
 
 import (
 	"fmt"
+	"main/templates"
 	"math"
 )
 
-func InputArray(input []int, n int) {
-	for i := 0; i < n; i++ {
-		fmt.Scan(&input[i])
-	}
-}
-
-func main() {
+func Codeforces_992_A() {
 	var t int
 	fmt.Scan(&t)
 
@@ -19,7 +14,7 @@ func main() {
 		var n, k int
 		fmt.Scan(&n, &k)
 		arr := make([]int, n)
-		InputArray(arr, n)
+		templates.InputArray(arr, n)
 
 		ans := "No"
 		val := -1

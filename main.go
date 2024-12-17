@@ -5,6 +5,5 @@ import (
 )
 
 func main() {
-	// codeforces.Codeforces_2041_D()
-	codeforces.Codeforces_991_C()
+	codeforces.Codeforces_992_A()
 }
