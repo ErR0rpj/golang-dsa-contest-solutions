@@ -1,16 +1,11 @@
-package main
+package codeforces
 
 import (
 	"fmt"
+	"main/templates"
 )
 
-func InputArray(input []int, n int) {
-	for i := 0; i < n; i++ {
-		fmt.Scan(&input[i])
-	}
-}
-
-func main() {
+func Codeforces_993_D() {
 	var t int
 	fmt.Scan(&t)
 
@@ -18,7 +13,7 @@ func main() {
 		var n int
 		fmt.Scan(&n)
 		arr := make([]int, n)
-		InputArray(arr, n)
+		templates.InputArray(arr, n)
 		temp := make(map[int]int)
 		var leftovers []int
 
